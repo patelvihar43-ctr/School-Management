@@ -160,29 +160,7 @@ export default function DashboardLayout({ children, role, onLogout }: DashboardL
               ))}
             </SidebarMenu>
 
-            <Separator className={cn("my-8", isAdmin ? "bg-slate-800" : "bg-slate-100/50")} />
-            
-            <div className={cn(
-              "mb-4 px-3 text-[10px] font-bold uppercase tracking-widest",
-              isAdmin ? "text-slate-600" : "text-slate-400"
-            )}>{isAdmin ? 'Secure Operations' : 'System Insights'}</div>
-            <div className="space-y-4 px-3">
-              <div className={cn(
-                "rounded-[1.5rem] p-4 border",
-                isAdmin ? "bg-slate-50 border-slate-100" : "bg-accent/5 border-accent/10"
-              )}>
-                <div className="flex items-center justify-between mb-2">
-                  <p className={cn("text-[10px] font-bold uppercase tracking-widest", isAdmin ? "text-slate-400" : "text-accent")}>Vault Sync</p>
-                  <span className="h-2 w-2 rounded-full bg-green-500 shadow-sm" />
-                </div>
-                <div className={cn("h-1.5 w-full rounded-full overflow-hidden", isAdmin ? "bg-slate-200" : "bg-accent/10")}>
-                  <div className={cn("h-full rounded-full", isAdmin ? "bg-indigo-500 w-[92%]" : "bg-accent w-[78%]")} />
-                </div>
-                <p className={cn("mt-2 text-[10px] font-medium uppercase tracking-wider tabular-nums", isAdmin ? "text-slate-400" : "text-slate-500")}>
-                  {isAdmin ? 'Encrypted Connection Active' : '1.2GB/2GB Utilized'}
-                </p>
-              </div>
-            </div>
+            <Separator className={cn("my-8", isAdmin ? "bg-slate-100" : "bg-slate-100/50")} />
           </SidebarContent>
 
           <SidebarFooter className="p-8">
